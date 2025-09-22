@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=DragToHash
 Exec=dragtohash
-Icon=icon
+Icon=dragtohash
 Type=Application
 Categories=Utility;
