@@ -22,14 +22,12 @@ endif()
 
 target_link_libraries(dragtohash PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-# -------- install rules (used by CPack) --------
 install(TARGETS dragtohash RUNTIME DESTINATION bin)
 install(FILES packaging/linux/dragtohash.desktop DESTINATION share/applications)
 install(FILES resources/icon-256.png
         DESTINATION share/icons/hicolor/256x256/apps
         RENAME dragtohash.png)
 
-# -------- CPack (DEB + TGZ) --------
 set(CPACK_PACKAGE_NAME "dragtohash")
 set(CPACK_PACKAGE_VENDOR "Willman Durán")
 set(CPACK_PACKAGE_CONTACT "contact@willmanstoolbox.com")
@@ -38,12 +36,10 @@ set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
 
 set(CPACK_GENERATOR "DEB;TGZ")
 
-# Debian packaging
-set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")      # results in dragtohash_${ver}_amd64.deb
+set(CPACK_DEBIAN_FILE_NAME "DEB-DEFAULT")
 set(CPACK_DEBIAN_PACKAGE_SECTION "utils")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Willman Durán <contact@willmanstoolbox.com>")
 
-# Let dpkg-shlibdeps compute runtime Depends automatically
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
 
 include(CPack)

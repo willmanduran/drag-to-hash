@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
-    app.setWindowIcon(QIcon(":/resources/icon.png")); // works cross-platform
+    app.setWindowIcon(QIcon(":/resources/icon.png"));
 
     DropWidget w;
     w.show();

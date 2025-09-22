@@ -25,11 +25,9 @@ DropWidget::DropWidget(QWidget *parent) : QWidget(parent) {
 
     fileList_ = new QListWidget();
 
-    // File selection button
     fileBtn_ = new QPushButton("Browse Files");
     connect(fileBtn_, &QPushButton::clicked, this, &DropWidget::browseFiles);
 
-    // Output path widgets
     outputPath_ = new QLineEdit(QDir::homePath() + "/Documents/output-hash.txt");
     outputBtn_ = new QPushButton("Browse Output");
     connect(outputBtn_, &QPushButton::clicked, this, &DropWidget::browseOutput);
@@ -38,11 +36,9 @@ DropWidget::DropWidget(QWidget *parent) : QWidget(parent) {
     outputLayout->addWidget(outputPath_);
     outputLayout->addWidget(outputBtn_);
 
-    // Checkbox for including filenames
     includeFileName_ = new QCheckBox("Include filename");
     includeFileName_->setChecked(true);
 
-    // Hash button
     hashBtn_ = new QPushButton("Hash and Save");
     connect(hashBtn_, &QPushButton::clicked, this, &DropWidget::hashAndSave);
 
