@@ -1,31 +1,9 @@
 # Drag-to-Hash — Willman’s Toolbox
 
-> Drop files to compute SHA-256 hashes. Free and open.
-
-- **Website:** https://www.willmanstoolbox.com  
-- **Downloads page:** https://www.willmanstoolbox.com/dragtohash/  
-- **Repo:** https://github.com/willmanstoolbox/hashdrop  
-- **Donate:** https://www.willmanstoolbox.com/donate  
-
----
-
 ## What it is
 
 Drag-to-Hash is a small desktop utility that computes SHA-256 hashes for one or more files and writes the results to a text file.  
 You can drag files into the window or browse for them, set an output path, and choose whether to include filenames alongside the hashes.
-
----
-
-## Key features
-
-- Drag-and-drop files or use the file picker.  
-- Configurable output path (defaults to `~/Documents/output-hash.txt`).  
-- Optionally include the original file name in each line.  
-- Efficient hashing with 1 MB chunks.  
-- Cross-platform builds for Windows and Linux.  
-- Simple, minimal Qt6-based UI.  
-
----
 
 ## Build from source
 
@@ -44,3 +22,12 @@ cmake --build build -j
 
 # Run
 ./build/dragtohash
+```
+
+
+## Support & Contact
+If you find any bugs, have any ideas to improve this or just want to chat about C in general feel free to email me.
+
+**Email:** ticuette@gmail.com
+
+**More Tools:** You can support my work or check out other tools at [willmanstoolbox.com](https://willmanstoolbox.com)
